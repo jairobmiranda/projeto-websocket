@@ -9,4 +9,6 @@ async function bootstrap() {
   await app.listen(3000); // servidor HTTP + WS no mesmo processo
   console.log('App rodando na porta 3000 (ws://localhost:3000)');
 }
-bootstrap();
+bootstrap().catch((err) => {
+  console.error('Erro ao iniciar a aplicação:', err);
+});
