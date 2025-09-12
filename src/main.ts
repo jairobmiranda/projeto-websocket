@@ -25,7 +25,7 @@ async function bootstrap() {
     httpsOptions ? { httpsOptions } : {},
   );
   ws7070.useWebSocketAdapter(new WsAdapter(ws7070));
-  await ws7070.listen(8080);
+  await ws7070.listen(7070);
 
   const protocol7070 = httpsOptions ? 'wss' : 'ws';
   console.log(`App rodando na porta 7070 (${protocol7070}://localhost:7070)`);
@@ -36,7 +36,7 @@ async function bootstrap() {
     httpsOptions ? { httpsOptions } : {},
   );
   ws8080.useWebSocketAdapter(new WsAdapter(ws8080));
-  await ws8080.listen(7070);
+  await ws8080.listen(7071);
 
   const protocol8080 = httpsOptions ? 'wss' : 'ws';
   console.log(`App rodando na porta 8080 (${protocol8080}://localhost:8080)`);
